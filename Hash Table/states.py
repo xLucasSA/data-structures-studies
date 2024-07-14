@@ -3,3 +3,6 @@ class State:
         self.sigla = acronym
         self.nomeEstado = name
         self.next = None
+
+    def __str__(self) -> str:
+        return self.sigla
