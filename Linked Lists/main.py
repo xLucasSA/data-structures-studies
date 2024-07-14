@@ -1,8 +1,6 @@
 from card import Card
 from linked_list import Linked_list
 
-waiting_list = Linked_list()
-
 def inserir():
     """
     Read user input card and, if is valid, insert on the linked list with the correct method
@@ -81,4 +79,5 @@ def main():
             print("Valor inserido incorretamente! Tente novamente\n")
             continue
 
+waiting_list = Linked_list()
 main()
