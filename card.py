@@ -1,4 +1,7 @@
 class Card:
+    """
+    Node of linked list. Contains colors and number of cards, and next element in the
+    """
     def __init__(self, number: int, color: str) -> None:
         self.number = number
         self.color = color
