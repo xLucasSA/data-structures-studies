@@ -4,7 +4,10 @@ class Linked_list:
     def __init__(self) -> None:
         self.head = None
 
-    def __mul__(self, integer: int) -> dict:
+    def __mul__(self, integer: int) -> dict[int, "Linked_list"]:
+        """
+        Create multiple instances of linked lists
+        """
         result = {}
 
         for i in range(0, integer):
@@ -17,8 +20,18 @@ class Linked_list:
         current_state: State = self.head
 
         while current_state:
-            text += f"{current_state} -> "
+            text += f"{current_state.sigla} -> "
             current_state = current_state.next 
 
         text += "None" 
         return text
+    
+    def insert(self, state: State) -> None:
+        """
+        Insert new acronym in the linked list. If is empty, insert on linked list's head 
+        """
+        if not self.head:
+            state.sigla
+            return
+
+        state.next, self.head = self.head.next, state
