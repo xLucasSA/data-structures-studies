@@ -38,6 +38,8 @@ def inserir():
             waiting_list.head = card
             continue
 
+        waiting_list.inserirComPrioridade(card) if card.has_priority() else waiting_list.inserirSemPrioridade(card)
+
 def imprimirListaEspera():
     """
     Print the linked list
