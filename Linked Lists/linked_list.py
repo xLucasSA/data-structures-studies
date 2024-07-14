@@ -10,17 +10,16 @@ class Linked_list:
 
         while current_card:
             text += f"{current_card} -> "
-            current_card = current_card.next  
+            current_card = current_card.next 
 
-        text += "None"
+        text += "None" 
         return text
 
-    def inserirSemPrioridade(self, card: Card) -> None:
+    def inserirSemPrioridade(self, card: Card) -> bool:
         """
         Recive one card and insert on the tail of linked list
         """
         current_card: Card = self.head
-
         while current_card:
             if not current_card.next:
                 current_card.next = card
@@ -28,9 +27,9 @@ class Linked_list:
 
             current_card = current_card.next
         
-    def inserirComPrioridade(self, card: Card) -> None:
+    def inserirComPrioridade(self, card: Card) -> bool:
         """
-        Recive one card and insert after all yellow cards. If the linked list don't have any yellow cars, insert on the top
+        Recive one card and insert after all yellow cards
         """    
         current_card: Card = self.head
         if not current_card.has_priority():
@@ -38,10 +37,21 @@ class Linked_list:
             return
 
         last_yellow_card: Card = None
-
         while current_card:
             if current_card.has_priority():
                 last_yellow_card = current_card
             current_card = current_card.next
         
         last_yellow_card.next, card.next = card, last_yellow_card.next
+
+    def remove_first_card(self) -> Card:
+        """
+        Remove the head of linked list or return None
+        """
+        if not self.head:
+            return None
+        
+        removed_card = self.head 
+        self.head = self.head.next
+
+        return removed_card
