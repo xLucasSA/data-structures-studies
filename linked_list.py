@@ -16,7 +16,7 @@ class Linked_list:
 
     def inserirSemPrioridade(self, card: Card) -> None:
         """
-        Recive one card and insert on the last position of linked list
+        Recive one card and insert on the tail of linked list
         """
         if not self.head:
             self.head = card
@@ -31,16 +31,34 @@ class Linked_list:
 
             current_card = current_card.next
         
-#     def inserirComPrioridade()
+    def inserirComPrioridade(self, card: Card) -> None:
+        """
+        Recive one card and insert after all card with color yellow
+        """
+        if not self.head:
+            self.head = card
+            return
+        
+        current_card: Card = self.head
+        last_yellow_card: Card = None
+
+        while current_card:
+            if current_card.color == "A":
+                last_yellow_card = current_card
+            current_card = current_card.next
+        
+        last_yellow_card.next, card.next = card, last_yellow_card.next
 
     
 # lista = Linked_list()
-# cartao1 = Card(1, 'cartao1')
-# cartao2 = Card(2, 'cartao2')
-# cartao3 = Card(3, 'cartao3')
+# cartao1 = Card(1, 'A')
+# cartao2 = Card(2, 'V')
+# cartao3 = Card(3, 'V')
+# cartao4 = Card(4, 'V')
 
-# lista.inserirSemPrioridade(cartao1)
 # lista.inserirSemPrioridade(cartao2)
+# lista.inserirSemPrioridade(cartao1)
 # lista.inserirSemPrioridade(cartao3)
+# lista.inserirComPrioridade(cartao4)
 
 # print(lista)
