@@ -3,12 +3,12 @@ from states import State
 
 class Hash_table:
     def __init__(self, lists: int) -> None:
-        self.table = Linked_list() * lists
+        self.data = Linked_list() * lists
     
     def __str__(self) -> str:
         text = ""
         
-        for key, value in self.table.items():
+        for key, value in self.data.items():
             text += f"{key}: {value}\n"
         
         return text
@@ -17,9 +17,9 @@ class Hash_table:
         """
         Insert new State on hash_table generating hash with State acronym. If State is DF insert on index 7
         """
-        if state.sigla == "DF":
-            self.table[7].insert(state)
+        if state.acronym == "DF":
+            self.data[7].insert(state)
             return
 
-        number_hash = (ord(state.sigla[0]) + ord(state.sigla[1])) % 10
-        self.table[number_hash].insert(state)
+        number_hash = (ord(state.acronym[0]) + ord(state.acronym[1])) % 10
+        self.data[number_hash].insert(state)

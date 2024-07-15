@@ -1,7 +1,7 @@
 from card import Card
 from linked_list import Linked_list
 
-def inserir():
+def insert():
     """
     Read user input card and, if is valid, insert on the linked list with the correct method
     """
@@ -36,15 +36,15 @@ def inserir():
             waiting_list.head = card
             continue
 
-        waiting_list.inserirComPrioridade(card) if card.has_priority() else waiting_list.inserirSemPrioridade(card)
+        waiting_list.insert_with_priority(card) if card.has_priority() else waiting_list.insert_without_priority(card)
 
-def imprimirListaEspera():
+def print_waiting_list():
     """
     Print the linked list
     """
     print(waiting_list)
 
-def atenderPaciente():
+def assist_pacient():
     """
     Call patient by the number of card or inform there are no patients
     """
@@ -67,9 +67,9 @@ def main():
             print("4 - Sair")
             action = int(input())
 
-            if action == 1: inserir()
-            if action == 2: imprimirListaEspera()
-            if action == 3: atenderPaciente()
+            if action == 1: insert()
+            if action == 2: print_waiting_list()
+            if action == 3: assist_pacient()
             
             if action == 4: 
                 print("Finalizando...")

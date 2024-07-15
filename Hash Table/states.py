@@ -1,8 +1,8 @@
 class State:
     def __init__(self, acronym: str, name: str) -> None:
-        self.sigla = acronym
-        self.nomeEstado = name
+        self.acronym = acronym
+        self.name = name
         self.next = None
 
     def __str__(self) -> str:
-        return self.sigla
+        return self.acronym

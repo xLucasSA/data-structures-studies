@@ -15,7 +15,7 @@ class Linked_list:
         text += "None" 
         return text
 
-    def inserirSemPrioridade(self, card: Card) -> bool:
+    def insert_without_priority(self, card: Card) -> bool:
         """
         Recive one card and insert on the tail of linked list
         """
@@ -27,7 +27,7 @@ class Linked_list:
 
             current_card = current_card.next
         
-    def inserirComPrioridade(self, card: Card) -> bool:
+    def insert_with_priority(self, card: Card) -> bool:
         """
         Recive one card and insert after all yellow cards
         """    
