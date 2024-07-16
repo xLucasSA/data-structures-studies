@@ -34,5 +34,6 @@ Criei este repositório para documentar estudos sobre estruturas de dados. Adote
 Para conseguir rodar os códigos será necessário que o python em sua máquina. Você consegue baixar nesse link: [clique aqui](https://www.python.org/downloads/)
 
 Aqui estão os tópicos para redirecionar para cada página:
-* [Listas Encadeadas](./Linked%20Lists/README.md)
-* [Tabela Hash](./Hash%20Table/README.md)
+* [Linked Lists](./linked-lists/README.md)
+* [Hash Table](./hash-table/README.md)
+* [Graphs](./graphs/README.md)
