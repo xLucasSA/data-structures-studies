@@ -9,25 +9,28 @@
 In this example, we have a linked list working like a medical clinic queue. Each person in line receives a card that has a color and a number.
 
 Cards have two colors:
-* Yellows
-* Greens
 
-This queue has a priority system, where yellow cards have priority over green cards, that is, whenever a patient with a yellow card is registered, they must have priority over patients who received green cards. 
+- Yellows
+- Greens
+
+This queue has a priority system, where yellow cards have priority over green cards, that is, whenever a patient with a yellow card is registered, they must have priority over patients who received green cards.
 
 Cards have their own way of generating numbers:
-* Yellow -> must start from number 201
-* Green -> must start from number 1
+
+- Yellow -> must start from number 201
+- Green -> must start from number 1
 
 In the program we have the following options:
-* 1 -> Add a patient to the queue
-* 2 -> Show the current patient queue
-* 3 -> Serve the next patient in the queue (removes the first card from the linked list)
+
+- 1 -> Add a patient to the queue
+- 2 -> Show the current patient queue
+- 3 -> Serve the next patient in the queue (removes the first card from the linked list)
 
 <br />
 
--------------------------------------------------- 
+---
 
--------------------------------------------------- 
+---
 
 <br />
 
@@ -37,19 +40,34 @@ In the program we have the following options:
 
 </div>
 
+### Funcionamento
+
+Quando temos uma lista encadeada, todos os itens são armazenados e cada deles apontam para a localização do próximo elemento dessa lista (lista simplesmente encadeada), a lista conhece somente o seu primeiro elemento (head) e seu último elemento (tail) não aponta para nenhum elemento, indicando o final da lista. Veja a imagem abaixo:
+
+![Lista Simplesmente Encadeada](https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/C_language_linked_list.png/438px-C_language_linked_list.png)
+
+Dado esse princípio construtivo, para fazer uma busca e verificar se determinado elemento está contido na lista precisamos percorrer por toda a lista e verificar se ele está presente ou não. Com isso, é possível identifcar o tempo necessário para executar ações dentro das listas.
+
+### Complexidades
+
+Dessa forma, podemos verificar alguns pontos importantes sobre as complexidades _Big(O)_ de possíveis operações com as listas encadeadas.
+
 Neste exemplo, temos uma lista encadeada trabalhando como uma fila de atendimento de uma clínica médica. Cada pessoa na fila recebe um cartão que possui uma cor e uma numeração.
 
 Cartões possuem duas cores:
-* Amarelos
-* Verdes
 
-Essa fila possui um sistema de prioridades, onde os cartões amarelos possuem prioridades sobre cartões verdes, ou seja, sempre que for cadastrado um paciente com cartão de cor amarela ele deverá ter prioridade sobre os pacientes que receberam o cartões de cor verde. 
+- Amarelos
+- Verdes
+
+Essa fila possui um sistema de prioridades, onde os cartões amarelos possuem prioridades sobre cartões verdes, ou seja, sempre que for cadastrado um paciente com cartão de cor amarela ele deverá ter prioridade sobre os pacientes que receberam o cartões de cor verde.
 
 Os cartões tem sua própria forma de gerar números:
-* Amarelos -> devem iniciar a partir do número 201
-* Verdes -> devem iniciar a partir do número 1
+
+- Amarelos -> devem iniciar a partir do número 201
+- Verdes -> devem iniciar a partir do número 1
 
 No programa temos as seguintes opções:
-* 1 -> Inserir um paciente na fila
-* 2 -> Mostrar a fila de pacientes no momento
-* 3 -> Atender o próximo paciente da fila (remove o primeiro cartão da lista encadeada)
+
+- 1 -> Inserir um paciente na fila
+- 2 -> Mostrar a fila de pacientes no momento
+- 3 -> Atender o próximo paciente da fila (remove o primeiro cartão da lista encadeada)
